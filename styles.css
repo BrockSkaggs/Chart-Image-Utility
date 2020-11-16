@@ -1,0 +1,37 @@
+.input-box{
+    background-color: rgb(251, 251, 88);
+    text-align: center;
+}
+
+.instruction{
+    color:blue;
+}
+
+.pixel-note{
+    color:gray;
+}
+
+#table-wrapper {
+    position:relative;
+    width:90%;
+  }
+#table-scroll {
+height:200px;
+overflow:auto;  
+margin-top:20px;
+}
+#table-wrapper table {
+width:100%;
+    
+}
+#table-wrapper table * {
+color:black;
+}
+#table-wrapper table thead th .text {
+position:absolute;   
+top:-20px;
+z-index:2;
+height:20px;
+width:35%;
+border:1px solid red;
+}

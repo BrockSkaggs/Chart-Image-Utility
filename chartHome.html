@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css"> -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container-fluid m-2">
+            <div class="row">
+                <h2 class="col-12 text-center">Chart Image Utility</h2>
+            </div>
+            <div class="row">
+                <p class="mr-1" >Select Image File</p>
+                <input id="image-file" type="file" />
+            </div>
+            <div class="row">
+                <p class="mr-1">Instructions:</p>
+                <p id="instruction" class="instruction" ></p>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 container">
+                    <canvas id="chartCanvas" width="600" height="400" style="padding-left: 0px;"></canvas>
+                </div>
+                <div class="col-xl-6 container">
+                    <div class="row card mr-1">
+                        <div class="card-body container">
+                            <div class="row">
+                                <span class="font-weight-bold col-3">Origin</span>
+                                <span class="col-1 text-center">X</span>
+                                <span class="col-2 text-center pixel-note" id="originPointX"></span>                                
+                                <span class="col-1 text-center">Y</span>
+                                <span class="col-2 text-center pixel-note" id="originPointY"></span>
+                            </div>
+                            <div class="row">
+                                <input type="number" id="originXVal" class="col-2 offset-4 input-box" step=0.01>
+                                <input type="number" id="originYVal" class="col-2 offset-1 input-box" step=0.01>
+                            </div>
+                            <div class="row">
+                                <span class="font-weight-bold col-3">Max. X Point</span>
+                                <span class="col-1 text-center">X</span>
+                                <span class="col-2 text-center pixel-note" id="maxXPointX"></span>                                
+                                <span class="col-1 text-center">Y</span>
+                                <span class="col-2 text-center pixel-note" id="maxXPointY"></span>
+                            </div>
+                            <div class="row">
+                                <input type="number" id="maxXVal" class="col-2 offset-4 input-box">
+                            </div>
+                            <div class="row">
+                                <span class="font-weight-bold col-3">Max. Y Point</span>
+                                <span class="col-1 text-center">X</span>
+                                <span class="col-2 text-center pixel-note" id="maxYPointX"></span>                                
+                                <span class="col-1 text-center">Y</span>
+                                <span class="col-2 text-center pixel-note" id="maxYPointY"></span>
+                            </div>
+                            <div class="row">
+                                <input type="number" id="maxYVal" class="col-2 offset-7 input-box">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <p class="font-weight-bold">Interpolated Values</p>
+                    </div class="row"> -->
+                    <div class="row">
+                        <span class="font-weight-bold" style="margin-bottom: -15px;">Interpolated Values</span>
+                        <div id="table-wrapper">
+                            <div id="table-scroll">
+                                <table class="table table-hover" id="resultTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Point ID</th>
+                                            <th>X Value</th>
+                                            <th>Y Value</th>
+                                        </tr>
+                                        <tbody>
+        
+                                        </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="chart.js" type="text/javascript"></script>
+    </body>
+</html>
